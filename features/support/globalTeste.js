@@ -7,9 +7,7 @@ const {
 } = require("@cucumber/cucumber");
 const { chromium } = require("@playwright/test");
 
-
 setDefaultTimeout(500000);
-
 
 BeforeAll(async () => {
   global.browser = await chromium.launch({
@@ -24,7 +22,6 @@ AfterAll(async () => {
 Before(async () => {
   global.context = await global.browser.newContext();
   global.page = await global.context.newPage();
-  await page.goto('http://automationpractice.com/');
 });
 
 After(async () => {

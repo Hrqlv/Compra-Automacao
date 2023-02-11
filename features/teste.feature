@@ -2,6 +2,7 @@ Feature: TollsQA
 
     Scenario: Efetuar uma compra
 
+        Given que eu esteja na pagina
         Given que eu escolhar um produto
         When eu clico em Add to cart o produto
         When a compra é adicionada exibindo a mensagem "Product successfully added to your shopping cart"
@@ -12,4 +13,3 @@ Feature: TollsQA
         Then que eu escolha a forma de pagamento
         Then que eu esteja no resumo do pedido
         Then que eu esteja na pagina de confirmar o pedido
-        
